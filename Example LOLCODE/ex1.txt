@@ -1,0 +1,16 @@
+HAI
+I HAS A name
+LOL name R "kicikici (^•ﻌ•^)"
+BTW it's the best name ever
+IM IN YR house UPPIN YR stair FROM 0 BAI 1
+    VISIBLE stair
+    VISIBLE name
+    IZ stair LIEK 5
+        YARLY
+            GTFO
+        NOWAI
+            VISIBLE "not yet"
+    KTHX
+IM OUTTA YR house
+VISIBLE "di ent ^._.^ฅ"
+KTHXBYE

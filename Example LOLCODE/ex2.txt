@@ -1,0 +1,12 @@
+HAI
+UR bag IZ FUL OF "choklat", "candi", "keik"
+VISIBLE "Let mi see wochu has in hir..."
+IM IN YR things WATCHIN YR swit OF bag
+    VISIBLE swit
+    VISIBLE "~I LIEK IT! ⸜(｡˃ ᵕ ˂ )⸝♡"
+    OBTW I want it
+    liek rly bad
+    rly... TLDR
+IM OUTTA YR things
+VISIBLE "GIV IT PLZ (人ﾟ ∀ﾟ)"
+KTHXBYE

@@ -1,0 +1,7 @@
+HAI
+title MUST HAS "CATS"
+title MUST ALSO HAS " (^-^)"
+MEIK alt OF title LIEK "title"
+DRAW color OF title LIEK "red"
+DRAW fontSize OF title LIEK "50px"
+KTHXBYE

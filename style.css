@@ -1,0 +1,34 @@
+body {
+    color: rebeccapurple;
+}
+
+#title {
+    text-align: center;
+}
+
+#code {
+    display: block;
+    margin: auto;
+}
+
+#logarea {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 2em;
+    width: 44em;
+    margin: .5em auto;
+    text-align: center;
+    background-color: gainsboro;
+    border: 2px dotted gray;
+}
+
+.centered-text {
+    margin: auto;
+}
+
+#go {
+    display: block;
+    padding: .5em 1em;
+    margin: auto;
+}
