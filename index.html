@@ -14,25 +14,20 @@
         <h1 id="title">LOLCODEWEB</h1>
         <nav>
             <a href="#"><div class="current nav-element">ABOUT</div></a>
-            <a href="#"><div class="nav-element">SYNTAX</div></a>
-            <a href="#"><div class="nav-element">EXAMPLES</div></a>
-            <a href="#"><div class="nav-element">INSPIRATION</div></a>
+            <a href="syntax.html"><div class="nav-element">SYNTAX</div></a>
+            <a href="examples.html"><div class="nav-element">EXAMPLES</div></a>
+            <a href="inspiration.html"><div class="nav-element">INSPIRATION</div></a>
         </nav>
     </header>
     <main>
         <div class="coding">
-            <section id="logarea" class="coding-grid left-grid">
+            <section id="leftarea">
                 <img src="img/programmer.png" id="catimg" alt="Cat reaction">
+                <div id="logtext">[ CONSOLE ]</div>
             </section>
-            <section id="workarea" class="coding-grid">
-                <textarea name="code" id="code" cols="200" rows="15" placeholder="HAI"></textarea>
-            </section>
-        </div>
-        <div class="coding lower">
-            <section class="coding-grid">
-                <div id="logtext"></div>
-            </section>
-            <section class="coding-grid">
+            <section id="rightarea">
+                <label for="code" class="hidden">Magic zone of lolcoding</label>
+                <textarea name="code" id="code" class="light" cols="200" rows="15" placeholder="HAI"></textarea>
                 <div class="panel">
                     <button id="theme" class="panel-button" onclick="changeTheme()">BLACK CAT</button>
                     <button id="go" class="panel-button" onclick="runlol()">DEW IT</button>
@@ -41,7 +36,20 @@
             </section>
         </div>
         <article>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores itaque voluptatum voluptate perspiciatis harum, possimus fuga id repudiandae, dicta, saepe blanditiis soluta quos hic aliquam nesciunt porro nostrum earum expedita!
+            <h2>What is LOLCODEWEB?</h2>
+            <p>As <a href="https://en.wikipedia.org/wiki/LOLCODE" target="_blank">this Wikipedia article</a> says:</p>
+            <blockquote cite="https://en.wikipedia.org/wiki/LOLCODE">
+                LOLCODE is an esoteric programming language inspired by lolspeak, the language expressed in examples of the <a href="https://en.wikipedia.org/wiki/Lolcat" target="_blank">lolcat</a> Internet meme.<br>
+                The language was created in 2007 by Adam Lindsay, a researcher at the Computing Department of Lancaster University.
+            </blockquote>
+            <p>
+                This website provides a dialect of this language that can run in your browser.<br>
+                it does so by compiling the code to JavaScript, which is then run unless some errors are caught at compile time.<br>
+                You can see your object code (or happy little errors) in the browser console.
+            </p>
+            <p>
+                This project was created as a college assignment at AGH UST.
+            </p>
         </article>
     </main>
     <footer>

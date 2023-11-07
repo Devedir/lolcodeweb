@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOLCODEWEB</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="lolcompiler.js"></script>
+    <script src="editor.js"></script>
+</head>
+<body>
+    <header>
+        <h1 id="title">LOLCODEWEB</h1>
+        <nav>
+            <a href="index.html"><div class="nav-element">ABOUT</div></a>
+            <a href="#"><div class="current nav-element">SYNTAX</div></a>
+            <a href="examples.html"><div class="nav-element">EXAMPLES</div></a>
+            <a href="inspiration.html"><div class="nav-element">INSPIRATION</div></a>
+        </nav>
+    </header>
+    <main>
+        <div class="coding">
+            <section id="leftarea">
+                <img src="img/programmer.png" id="catimg" alt="Cat reaction">
+                <div id="logtext">[ CONSOLE ]</div>
+            </section>
+            <section id="rightarea">
+                <label for="code" class="hidden">Magic zone of lolcoding</label>
+                <textarea name="code" id="code" class="light" cols="200" rows="15" placeholder="HAI"></textarea>
+                <div class="panel">
+                    <button id="theme" class="panel-button" onclick="changeTheme()">BLACK CAT</button>
+                    <button id="go" class="panel-button" onclick="runlol()">DEW IT</button>
+                    <button id="clear" class="panel-button" onclick="clearCode()">NVRM</button>
+                </div>
+            </section>
+        </div>
+        <article>
+            <h2>Implemented syntax:</h2>
+            <ul class="syntax-list">
+                <li class="syntax">HAI
+                    &mdash; Mandatory start of every program.
+                </li>
+                <li class="syntax">KTHXBYE
+                    &mdash; Mandatory end of every program.
+                </li>
+                <li class="syntax">VISIBLE <i>[message]</i>
+                    &mdash; Browser console output.
+                </li>
+                <li class="syntax">SCRIM <i>[message]</i>
+                    &mdash; Alert message.
+                </li>
+                <li class="syntax">I HAS A <i>[variable]</i>
+                    &mdash; Variable declaration.
+                </li>
+                <li class="syntax">LOL <i>[variable]</i> R <i>[value]</i>
+                    &mdash; Variable assignment.
+                </li>
+                <li class="syntax">NOT TACHIN MY <i>[constant]</i> OF <i>[value]</i>
+                    &mdash; Constant declaration and assignment.
+                </li>
+                <li class="syntax">UR <i>[array]</i> IZ FUL OF <i>[elements]</i>
+                    &mdash; Array declaration and assignment.
+                </li>
+                <li class="syntax"><i>[elementID]</i> MUST (ALSO) HAS <i>[value]</i>
+                    &mdash; Changing (or adding with ALSO) innerHTML value of an element with a given ID.
+                </li>
+                <li class="syntax">MEIK <i>[attribute]</i> OF <i>[elementID]</i> LIEK <i>[value]</i>
+                    &mdash; Changing the attribute value of an element with a given ID.
+                </li>
+                <li class="syntax">DRAW <i>[property]</i> OF <i>[elementID]</i> LIEK <i>[value]</i>
+                    &mdash; As above, but it's CSS styling.
+                </li>
+                <li class="syntax">INVISIBLE <i>[message]</i>
+                    &mdash; Exception throwing.
+                </li>
+                <li class="syntax">IM IN YR <i>[loop name]</i> WHILE/TIL <i>[value]</i> LIEK/BIGR THAN/SMOLR THAN <i>[value]</i>
+                    &mdash; Looping while/until a condition is met.
+                </li>
+                <li class="syntax">IM IN YR <i>[loop name]</i> UPPIN/NERFIN YR <i>[iterator]</i> FROM <i>[value]</i> BAI <i>[value]</i><br>
+                    &mdash; A classic for loop incrementing (UPPIN) or decrementing (NERFIN) from a value by a value until its explicitly broken.
+                </li>
+                <li class="syntax">IM IN YR <i>[loop name]</i> WATCHIN YR <i>[variable]</i> OF/IN <i>[iterable]</i><br>
+                    &mdash; Looping through the values (OF) or properties (IN) of an iterable object.
+                </li>
+                <li class="syntax">IM OUTTA YR <i>[loop name]</i>
+                    &mdash; Closing a loop body.
+                </li>
+                <li class="syntax">GTFO
+                    &mdash; Loop breaking.
+                </li>
+                <li class="syntax">NAH NEXT
+                    &mdash; Loop continuation.
+                </li>
+                <li class="syntax">IZ <i>[value]</i> (NOT) LIEK/BIGR THAN/SMOLR THAN <i>[value]</i>
+                    &mdash; Conditional statement.
+                </li>
+                <li class="syntax">YARLY
+                    &mdash; Optional start of a positive conditional block.
+                </li>
+                <li class="syntax">NOWAI
+                    &mdash; Start of an "else" block.
+                </li>
+                <li class="syntax">KTHX
+                    &mdash; End of a conditional block.
+                </li>
+            </ul>
+            <p>
+                Note:<br>
+                - All keywords <strong>must</strong> be written in UPPERCASE!<br>
+                - Variable names must follow all JavaScript naming rules.<br>
+                - [value] and [message] can be a literal ("Może by tak ", 5.0, etc.) or a variable.
+            </p>
+        </article>
+    </main>
+    <footer>
+        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+            <span property="dct:title">LOLCODEWEB</span> by
+            <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/Devedir">Wojciech Dąbek</a>
+            is licensed under
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
+                CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1">
+            </a>
+        </p>
+    </footer>
+</body>
+</html>

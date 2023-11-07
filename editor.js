@@ -11,20 +11,19 @@ function clearCode() {
     document.getElementById("logtext").innerHTML = "";
     document.getElementById("logtext").style.backgroundColor = "gainsboro";
     document.getElementById("catimg").src = "img/programmer.png";
+    document.getElementById("logtext").innerHTML = "[ CONSOLE ]";
+    document.getElementById("logtext").style.color = "black";
 }
 
 function changeTheme() {
-    let codeHandle = document.getElementById("code");
-    if (isDark) {
-        codeHandle.style.backgroundColor = "white";
-        codeHandle.style.color = "black";
-        codeHandle.style.boxShadow = "0 0 0 2px black, 0 0 0 4px white";
-        document.getElementById("theme").innerHTML = "BLACK CAT";
-    } else {
-        codeHandle.style.backgroundColor = "#1a123d";
-        codeHandle.style.color = "white";
-        codeHandle.style.boxShadow = "0 0 0 4px white";
-        document.getElementById("theme").innerHTML = "WHITE CAT";
+    for (let codeHandle of document.getElementsByTagName("textarea")) {
+        if (isDark) {
+            codeHandle.classList.replace("dark", "light");
+            document.getElementById("theme").innerHTML = "BLACK CAT";
+        } else {
+            codeHandle.classList.replace("light", "dark");
+            document.getElementById("theme").innerHTML = "WHITE CAT";
+        }
     }
     isDark = !isDark;
 }
