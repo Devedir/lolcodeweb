@@ -7,9 +7,60 @@
     <title>LOLCODEWEB</title>
     <link rel="stylesheet" href="style.css">
     <script src="lolcompiler.js"></script>
+    <script src="editor.js"></script>
 </head>
 <body>
-    <h1 id="title">LOLCODEWEB</h1>
-    <a href="coding.html">CODING</a>
+    <header>
+        <h1 id="title">LOLCODEWEB</h1>
+        <nav>
+            <a href="#"><div class="current nav-element">ABOUT</div></a>
+            <a href="syntax.html"><div class="nav-element">SYNTAX</div></a>
+            <a href="examples.html"><div class="nav-element">EXAMPLES</div></a>
+            <a href="inspiration.html"><div class="nav-element">INSPIRATION</div></a>
+        </nav>
+    </header>
+    <main>
+        <div class="coding">
+            <section id="leftarea">
+                <img src="img/programmer.png" id="catimg" alt="Cat reaction">
+                <div id="logtext">[ CONSOLE ]</div>
+            </section>
+            <section id="rightarea">
+                <label for="code" class="hidden">Magic zone of lolcoding</label>
+                <textarea name="code" id="code" class="light" cols="200" rows="15" placeholder="HAI"></textarea>
+                <div class="panel">
+                    <button id="theme" class="panel-button" onclick="changeTheme()">BLACK CAT</button>
+                    <button id="go" class="panel-button" onclick="runlol()">DEW IT</button>
+                    <button id="clear" class="panel-button" onclick="clearCode()">NVRM</button>
+                </div>
+            </section>
+        </div>
+        <article>
+            <h2>What is LOLCODEWEB?</h2>
+            <p>As <a href="https://en.wikipedia.org/wiki/LOLCODE" target="_blank">this Wikipedia article</a> says:</p>
+            <blockquote cite="https://en.wikipedia.org/wiki/LOLCODE">
+                LOLCODE is an esoteric programming language inspired by lolspeak, the language expressed in examples of the <a href="https://en.wikipedia.org/wiki/Lolcat" target="_blank">lolcat</a> Internet meme.<br>
+                The language was created in 2007 by Adam Lindsay, a researcher at the Computing Department of Lancaster University.
+            </blockquote>
+            <p>
+                This website provides a dialect of this language that can run in your browser.<br>
+                it does so by compiling the code to JavaScript, which is then run unless some errors are caught at compile time.<br>
+                You can see your object code (or happy little errors) in the browser console.
+            </p>
+            <p>
+                This project was created as a college assignment at AGH UST.
+            </p>
+        </article>
+    </main>
+    <footer>
+        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+            <span property="dct:title">LOLCODEWEB</span> by
+            <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/Devedir">Wojciech Dąbek</a>
+            is licensed under
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
+                CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1">
+            </a>
+        </p>
+    </footer>
 </body>
 </html>

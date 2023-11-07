@@ -116,18 +116,22 @@ function runlol() {
     let lolcode = document.getElementById("code").value;
     try {
         const jsArray = interprete(lolcode);
-        document.getElementById("logarea").style.backgroundColor = "LimeGreen";
-        document.getElementById("logtext").style.color = "black";
-        document.getElementById("logtext").innerHTML = "YEY, I WORK!";
         let jsCode = jsArray.join(" ")
         console.log('--- Compiled to: ---');
         console.log(jsCode);
         console.log("--------------------\n");
         eval(jsCode);
+        document.getElementById("code").style.boxShadow = "0 0 0 4px LimeGreen";
+        document.getElementById("logtext").style.backgroundColor = "LimeGreen";
+        document.getElementById("logtext").style.color = "black";
+        document.getElementById("logtext").innerHTML = "YEY, I WORK!";
+        document.getElementById("catimg").src = "img/happycat.png";
     } catch (err) {
-        document.getElementById("logarea").style.backgroundColor = "red";
+        document.getElementById("code").style.boxShadow = "0 0 0 4px red";
+        document.getElementById("logtext").style.backgroundColor = "red";
         document.getElementById("logtext").style.color = "white";
         document.getElementById("logtext").innerHTML = err;
+        document.getElementById("catimg").src = "img/errorcat.png";
         throw err;
     }
 }

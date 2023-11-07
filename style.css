@@ -1,34 +1,275 @@
 body {
-    color: rebeccapurple;
+    margin: 0;
+    color: white;
+    background-color: #130c22;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #9175ff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #4b32ae;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2% 0;
+}
+
+main {
+    margin-top: 12%;
 }
 
 #title {
+    margin: 0 4%;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 7vh;
 }
 
-#code {
-    display: block;
-    margin: auto;
+nav {
+    flex: 4;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    font-size: calc(10px + 1.5vw);
+}
+
+nav > a {
+    color: white;
+}
+
+nav > a:hover {
+    text-decoration: none;
+}
+
+.nav-element {
+    box-sizing: content-box;
+    padding: .5em;
+    border-radius: .5em;
+    text-align: center;
+    transition: background-color .5s;
+}
+
+.nav-element:hover {
+    background-color: #230e77;
+}
+
+.current {
+    background-color: #3f2999;
+}
+
+.coding {
+    margin: 0 4%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+}
+
+#leftarea {
+    width: 50%;
+    min-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#rightarea {
+    width: 50%;
+    min-width: 450px;
+}
+
+.lower {
+    margin-bottom: 4%;
+}
+
+.coding-grid {
+    width: 50%;
 }
 
 #logarea {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    height: 2em;
-    width: 44em;
-    margin: .5em auto;
+    margin-right: 2%;
+    text-align: center;
+}
+
+#catimg {
+    max-height: 20em;
+}
+
+#workarea {
+    margin-left: 2%;
+}
+
+/* Chowam element, ale zostawiam go "widocznym" dla czytników ekranowych */
+.hidden {
+    border-width: 0;
+    clip-path: inset(1px 1px 1px 1px);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+textarea {
+    box-sizing: border-box;
+    padding: 1em;
+    max-width: 100%;
+    border-radius: .5em;
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    transition: all .5s;
+    white-space: pre-wrap;
+}
+
+#code {
+    font-size: 1.5em;
+}
+
+textarea.light {
+    background-color: white;
+    color: black;
+    box-shadow: 
+        0 0 0 2px black,
+        0 0 0 4px white;
+}
+
+textarea.dark {
+    background-color: #1a123d;
+    color: white;
+    box-shadow: 0 0 0 4px white;
+}
+
+.example-block > textarea.dark {
+    background-color: #130c22;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+#logtext {
     text-align: center;
     background-color: gainsboro;
-    border: 2px dotted gray;
+    color: black;
+    transition: all .5s;
+    border-radius: .5em;
+    line-height: 3em;
+    height: 3em;
+    width: 80%;
+    font-size: 1.5em;
+    overflow: auto;
+    margin: 1em auto;
 }
 
-.centered-text {
-    margin: auto;
+.panel {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-#go {
+.panel-button {
+    background-color: #4b32ae;
+    box-shadow: 0 0 0 5px #3f2999;
+    transition: background-color .5s;
+    color: white;
+    font-family: "Courier New";
+    font-weight: 600;
     display: block;
+    font-size: 1.8em;
+    padding: 2% 3%;
+    margin: 10px;
+    border-radius: .5em;
+}
+
+.panel-button:hover {
+    background-color: #3f2999;
+}
+
+.examples {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ex-label {
+    display: block;
+    font-size: 1.8em;
+    text-align: center;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+article {
+    padding: 3em 4%;
+    background-color: #1a123d;
+    font-size: 1.2em;
+}
+
+i {
+    font-weight: 100;
+}
+
+blockquote {
+    border-left: 5px solid #4b32ae;
+    background-color: #130c22;
+    margin: .5em;
     padding: .5em 1em;
-    margin: auto;
+}
+
+.syntax-list {
+    list-style-type: '> ';
+}
+
+.syntax {
+    margin: 1em 0;
+}
+
+.head-section {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.gallery-element {
+    margin: 2%;
+    height: auto;
+}
+
+.horizontal {
+    max-width: 50%;
+    min-width: 400px;
+}
+
+.vertical {
+    max-width: 25%;
+    min-width: 300px;
+}
+
+footer {
+    margin-top: 2em;
+    text-align: center;
 }
